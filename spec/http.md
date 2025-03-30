@@ -12,7 +12,7 @@ Tools must provide a single HTTP interface which provides the following set of r
 * `/agent/task` - Task management API
     * `GET /agent/task`
     * `POST /agent/task/complete`
-    * `POST /agent/task/failure`
+    * `POST /agent/task/fail`
 
 When, as part of the autominion interface, a tool provides a git repository URL, this URL must use the `http` or `https` scheme.
 Let `URL` stand for such a URL.
@@ -83,7 +83,7 @@ type Request = {
 
 **Response body:** No body.
 
-### `POST /agent/task/failure`
+### `POST /agent/task/fail`
 
 Agents should use this endpoint once they determined that solving a task has failed.
 
